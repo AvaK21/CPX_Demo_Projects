@@ -1,0 +1,30 @@
+# SPDX-FileCopyrightText: 2021 ladyada for Adafruit Industries
+# SPDX-License-Identifier: MIT
+
+
+#It refers to tappig (maybe moving) the board, like outside edge of the board, not the button on the board. The board has a built-in accelerometer that can detect taps and double-taps.
+
+from adafruit_circuitplayground import cp
+
+# Set to check for single-taps.
+cp.detect_taps = 1
+tap_count = 0
+
+# We're looking for 2 single-taps before moving on.
+while tap_count < 2:
+    if cp.tapped:
+        tap_count += 1
+print("Reached 2 single-taps!")
+
+# Now switch to checking for double-taps
+tap_count = 0
+cp.detect_taps = 2
+
+# We're looking for 2 double-taps before moving on.
+while tap_count < 2:
+    if cp.tapped:
+        tap_count += 1
+print("Reached 2 double-taps!")
+print("Done.")
+while True:
+    cp.red_led = True
