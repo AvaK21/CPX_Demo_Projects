@@ -1,4 +1,6 @@
-This were I will house my code for Circuit Playground Express (CPX) from Adafruit.
+# Circuit Playground Express Demo Projects
+
+Code is demo projects provided by Adafruit or modified versions
 
 Goal: Expand experience with sensors
 
